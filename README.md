@@ -41,11 +41,11 @@ Any wierd bugs left are on the Altium side. The driver drivers to present data t
 - **Dynamic Classification tables** - Tables based on `foo/bar --> foo#bar` format
 
 
-### Install and Test
+## Install and Test
 
-0. Clone this repo to static location
+### 0. Clone this repo to static location
 
-1. Run the `*install.ps1*` power shell script.  
+### 1. Run the `*install.ps1*` power shell script.  
 
 It will ask for admin. 
 
@@ -56,15 +56,13 @@ It updates the registry to point to the .dll in the bin folder.
 There is an uninstall script included to nuke the install.
  
 
-2. Check the odbc admin (64-bit) to verify installation:
+### 2. Check the odbc admin (64-bit) to verify installation:
 
 ![Start up the 64-bit ODBC admin ](doc/odbc_data_source_admin_64bit.png)
 
 ![Verify odbc-monkey in the System DSN](doc/odbc_data_source_admin_64bit__system_dsn.png)
 
-3.
-
-Run *rebuild_example.ps1* from a terminal.
+### 3. Run *rebuild_example.ps1* from a terminal.
 
 This uses the python tooling in `dblib_builder.py` to scan the example JSON data and regenerate `example\example.DbLib`.
 
@@ -76,9 +74,7 @@ It autogens example/example.dblib with all the proper settings.
 
 For large libraries it does all the work of automagically creating dblib for the target system.
 
-4.
-
-Add `example.dblib` to your altium library setup
+### 4. Add `example.dblib` to your altium library setup
 
 ![example.dblib in the example folder](doc/example_dblib.png)
 ![Altium setup and usage](doc/altium_setup.gif)
@@ -138,7 +134,7 @@ The driver extracts the latest version based on UUIDv7 timestamp in the `id` fie
 - If no `id` fields are present, the first entry in the `versions` array is used
 - The `classification` field (`category/table` format) determines which ODBC table the part belongs to
 
-### Columns / Schema
+### Columns / Tables / Schema
 
 There is no fixed built-in schema. Columns are discovered from the JSON data loaded for each table.
 
@@ -150,15 +146,12 @@ Rerun the python script if there is signficant changes to your classification st
 
 I typically use the the same fields for a particular classification.
 
-### Tables
-
-- `parts` - Returns all parts from all JSON files
-- `foo#bar` - Returns parts filtered by classification (for example, `SELECT * FROM [capacitors#Murata_C0402]`)
-
 Table names use `foo#bar` format derived from the JSON `classification` field with foo/bar format.
 
 Example:   ic/mcu  in the classification field will show up as the tbale ic#mcu in the components panel.
 
+- `parts` - Returns all parts from all JSON files
+- `foo#bar` - Returns parts filtered by classification (for example, `SELECT * FROM [capacitors#Murata_C0402]`)
 
 ## Implemenation Scope
 
