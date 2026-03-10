@@ -21,9 +21,9 @@
 
 A high-performance json ODBC driver designed for use with Altium Database Libraries (DbLib).
 
-odbc-monkey supports a git based workflows for your libraries and meta data. 
+odbc-monkey supports git based workflows for your libraries and meta-data. 
 
-The componets panel is very fast as everthing is local and cached in memory.
+The components panel is very fast as everthing is local and cached in memory.
 
 odbc-monkey has been tooled to work as good as possible in Altium and its ODBC access pattern. 
 
