@@ -27,7 +27,7 @@ The components panel is very fast as everthing is local and cached in memory.
 
 odbc-monkey has been tooled to work as good as possible in Altium and its ODBC access pattern. 
 
-Any wierd bugs left are on the altium side. The driver presents data in such a way that restart altium if you change data in the json files while x2.exe is running. 
+Any wierd bugs left are on the altium side. The driver presents data in such a way that restarting altium is rarely required if the underlying files change.
 
 This is most likely the swan song for altium dblibs. 
 
