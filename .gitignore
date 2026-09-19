@@ -1,4 +1,5 @@
 # Python
+.venv/
 gui/.venv/
 __pycache__/
 *.pyc

@@ -1,0 +1,10 @@
+standard_version = "2026.9.8"
+kind = "package"
+profile = "cpp-library"
+
+# Adoption begins with governed plans. Remove this ratchet after every
+# cpp-library scope passes locally.
+enabled_scopes = ["docs.plans"]
+
+[documentation.plans]
+roots = ["docs/plans"]
